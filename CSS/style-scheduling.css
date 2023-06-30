@@ -65,6 +65,7 @@ nav h2 {
     cursor: pointer;
     border-right: 4px solid rgba(223, 43, 43, 0.877);
     padding: 0.5em;
+    padding-right: 1.5em;
 }
 
 nav h2:hover {
@@ -77,7 +78,7 @@ nav h3 {
     color: #cfcfcf;
     transition: 0.5s;
     position: relative;
-    margin-left: 1em;
+    margin-left: 3em;
     cursor: pointer;
 }
 
