@@ -15,7 +15,7 @@
         }
 
         $AGE = $_POST['AGE'];
-        if (strlen($AGE) <= 2) {
+        if (strlen($AGE) > 2) {
             echo "Informe uma idade válida."; //personalizar alert com javascript
             exit();
         }
