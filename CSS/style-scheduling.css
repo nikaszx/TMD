@@ -1,0 +1,300 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.cdnfonts.com/css/nunito');               
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.preloader {
+    background: black;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.75, visibility 0.75;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader::after {
+    content: "";
+    width: 10em;
+    height: 10em;
+    border: 15px solid #cfcfcf;
+    border-top-color: #DF2B2B;
+    border-radius: 5em;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {transform: rotate(0turn)}
+    to {transform: rotate(1turn)}
+}
+
+header {
+    transition: filter 0ms ease-in-out 0ms;
+}
+
+nav {
+    background-color: black;
+    border-bottom: 7px solid rgba(223, 43, 43, 0.877);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav h2 {
+    font-size: 2.5em;
+    color: #cfcfcf;
+    transition: 0.5s;
+    cursor: pointer;
+    border-right: 4px solid rgba(223, 43, 43, 0.877);
+    padding: 0.5em;
+}
+
+nav h2:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.5s;
+}
+
+nav h3 {
+    font-size: 2em;
+    color: #cfcfcf;
+    transition: 0.5s;
+    position: relative;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+nav h3:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.5s;
+}
+
+main {
+    background: linear-gradient(270deg, #e4e4e4, #e1e1e1, #d9d9d9, #cacaca);
+    -webkit-animation: main 30s ease infinite;
+    animation: main 30s ease infinite;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+@-webkit-keyframes main {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes main {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+form {
+    max-width: 30em;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    transition: opacity 0.02s 0.4s;
+}
+
+.dumbell {
+    display: flex;
+    align-items: center;
+}
+
+.dumbell h4 {
+    font-size: 2.7em;
+    margin-top: 0.5em;
+    letter-spacing: 0.03em;
+    color: black;
+}
+
+.wrap {
+    position: relative;
+    height: 2em;
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+}
+
+.field {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 0.5px solid black;
+    transition: 0.25s;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.25s;
+}
+
+.field.active {
+    border-bottom-color: #1F1F1F;
+}
+
+.wrap input {
+    font-size: 1em;
+}
+
+.field.active + label {
+    font-size: 1em;
+    font-weight: bolder;
+    top: -0.3em;
+    transition: 0.25s;
+    opacity: 0.8;
+    color: #db0000;
+}
+
+
+.date-field {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 0.5px solid black;
+    transition: 0.4s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.date-field + label {
+    top: -0.3em;
+}
+
+.date-field.active + label {
+    font-size: 1em;
+    font-weight: bolder;
+    transition: 0.4s;
+    opacity: 0.8;
+    color: #DB0000;
+}
+
+.schedule-button {
+    display: inline-block;
+    width: 100%;
+    height: 2em;
+    font-size: 1.5em;
+    background-color: black;
+    color: #F0F0F0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5em;
+    transition: 1.0s;
+}
+
+.schedule-button:hover {
+    background-color: #DB0000;
+    opacity: 0.8;
+    transition: 1.0s;
+}
+
+.form p {
+    margin-top: 1.5em;
+    color: black;
+    font-size: 1.2em;
+}
+.form a { 
+    color: #db0000;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 0.7rem;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #3d3d3d;
+}
+
+::-webkit-scrollbar-track {
+    background: #777777;
+}
+
+footer {
+    background-color: black;
+    border-top: 7px solid rgba(223, 43, 43, 0.877);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+    font-family: 'Montserrat', sans-serif;
+    transition: filter 0ms ease-in-out 0ms;
+}
+
+.contact {
+    display: inline-flex;
+}
+
+.contact i {
+    font-size: 4em;
+    color: #a1a1a1;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin: 0 0.3em;
+    transition: 0.8s;
+}
+
+.contact i:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.8s;
+    letter-spacing: 0.2em;
+}
+
+.contact p {
+    color: #cfcfcf;
+    font-size: 1.5em;
+    /* display: inline-flex; */
+    position: relative;
+    left: center;
+    font-weight: 550;
+    margin-top: 0.7em;
+    margin-left: 2em;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+    transition: 0.8s;
+}
+
+.contact a:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.8s;
+}

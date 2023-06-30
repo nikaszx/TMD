@@ -1,0 +1,431 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.cdnfonts.com/css/nunito');               
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.preloader {
+    background: black;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.75, visibility 0.75;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader::after {
+    content: "";
+    width: 10em;
+    height: 10em;
+    border: 15px solid #cfcfcf;
+    border-top-color: #DF2B2B;
+    border-radius: 5em;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {transform: rotate(0turn)}
+    to {transform: rotate(1turn)}
+}
+
+header {
+    transition: filter 0ms ease-in-out 0ms;
+}
+
+nav {
+    background-color: black;
+    border-bottom: 7px solid rgba(223, 43, 43, 0.877);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav h2 {
+    font-size: 2.5em;
+    color: #cfcfcf;
+    transition: 0.5s;
+    cursor: pointer;
+    border-right: 4px solid rgba(223, 43, 43, 0.877);
+    padding: 0.5em;
+}
+
+nav h2:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.5s;
+}
+
+nav h3 {
+    font-size: 2em;
+    color: #cfcfcf;
+    transition: 0.5s;
+    position: relative;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+nav h3:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.5s;
+}
+
+main {
+    background: linear-gradient(270deg, #e4e4e4, #e1e1e1, #d9d9d9, #cacaca);
+    -webkit-animation: main 30s ease infinite;
+    animation: main 30s ease infinite;
+    background-size: cover;
+    height: 380vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+@-webkit-keyframes main {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes main {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.opening-hours {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 90%;
+}
+
+.opening-hours h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 2em;
+    transition: 0.5s;
+}
+
+.vetor-background1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    font-size: 15em;
+    animation: blink 1s linear infinite;
+}
+
+.vetor-background2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: #DF2B2B;
+    top: 115%;
+    left: 0;
+    font-size: 15em;
+    animation: blink 1s linear infinite;
+}
+
+.vetor-background3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: #DF2B2B;
+    top: 125%;
+    left: 45%;
+    font-size: 15em;
+    animation: blink 1s linear infinite;
+}
+
+.vetor-background4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: black;
+    top: 115%;
+    left: 45%;
+    font-size: 15em;
+    animation: blink 1s linear infinite;
+}
+
+.vetor-background5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: black;
+    top: 240%;
+    left: 10%;
+    font-size: 15em;
+    animation: blink 1s linear infinite;
+}
+
+.vetor-background6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: #DF2B2B;
+    top: 265%;
+    left: 20%;
+    font-size: 15em;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 60%;
+    }
+    50% {
+        opacity: 40%;
+    }
+    100% {
+        opacity: 30%;
+    }
+}
+
+.op-hours-table {
+    position: absolute;
+    top: 100%;
+    background: #DF2B2B;
+    color: #cfcfcf;
+    padding: 1em;
+    width: 50%;
+    height: 50%;
+    font-size: 2.5em;
+    box-shadow: 15px 15px 0px 2px rgba(223, 43, 43, 0.3);
+    -webkit-box-shadow: 15px 15px 0px 2px rgba(223, 43, 43, 0.3);
+    -moz-box-shadow: 15px 15px 0px 2px rgba(223, 43, 43, 0.3);
+}
+
+.op-hours-table table {
+    border: 1px solid black;
+}
+
+
+.slider-home {
+    width: 100vw;
+    height: 50%;
+    display: flex;
+    position: relative;
+    top: -17.5%;
+    overflow: hidden;
+}
+
+.list-img {
+    display: flex;
+}
+
+.list-img img {
+    width: 150vw;
+    height: 70%;
+    object-fit: cover;
+}
+
+.ul-dots {
+    position: relative;
+    top: 65%;
+    width: 7em;
+    height: 1em;
+    left: -65%;
+    color: #cfcfcf;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-dots li {
+    list-style: none;
+    width: 7em;
+    height: 1em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    background-color: #cfcfcf;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.ul-dots li.active {
+    list-style: none;
+    display: inline-flex;
+    width: 14em;
+    height: 1em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    background-color: #DF2B2B;
+}
+
+.structure {
+    height: 60%;
+    width: 99.4vw;
+    background-color: #DF2B2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 180%;
+}
+
+.structure p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    font-size: 2em;
+    color: #cfcfcf;
+    padding: 1em;
+}
+
+.structure h2 {
+    position: relative;
+    top: -35%;
+    font-size: 2.5em;
+    color: #cfcfcf;
+}
+
+.structure img {
+    width: 50%;
+    height: 90%;
+    position: relative;
+    top: 80%;
+    border: 2.5px solid #cfcfcf;
+}
+
+.moreInfo {
+    height: 60%;
+    width: 50%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 310%;
+    color: #cfcfcf;
+    border: 0.2em solid #cfcfcf;
+    box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+    -webkit-box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+    -moz-box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+    transition: 0.5s;
+}
+
+.moreInfo:hover {
+    border: 0.2em solid rgba(223, 43, 43, 0.9);
+    height: 61%;
+    width: 51%;
+    transition: 0.5s;
+}
+
+.moreInfo h2 {
+    color: #cfcfcf;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    transition: 0.5s;
+}
+
+.moreInfo h2:hover {
+    color: #DF2B2B;
+    letter-spacing: 0.01em;
+    transition: 0.5s;
+}
+
+.moreInfo-table {
+    font-size: 2em;
+    transition: 0.5s;
+}
+.moreInfo-table:hover {
+    letter-spacing: 0.01em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 0.7rem;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #3d3d3d;
+}
+
+::-webkit-scrollbar-track {
+    background: #777777;
+}
+
+footer {
+    background-color: black;
+    border-top: 7px solid rgba(223, 43, 43, 0.877);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+    font-family: 'Montserrat', sans-serif;
+    transition: filter 0ms ease-in-out 0ms;
+}
+
+.contact {
+    display: inline-flex;
+}
+
+.contact i {
+    font-size: 4em;
+    color: #a1a1a1;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin: 0 0.3em;
+    transition: 0.8s;
+}
+
+.contact i:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.8s;
+    letter-spacing: 0.2em;
+}
+
+.contact p {
+    color: #cfcfcf;
+    font-size: 1.5em;
+    /* display: inline-flex; */
+    position: relative;
+    left: center;
+    font-weight: 550;
+    margin-top: 0.7em;
+    margin-left: 2em;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+    transition: 0.8s;
+}
+
+.contact a:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.8s;
+}

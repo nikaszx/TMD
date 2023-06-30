@@ -1,0 +1,253 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.cdnfonts.com/css/nunito');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.preloader {
+    background: black;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.75, visibility 0.75;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader::after {
+    content: "";
+    width: 10em;
+    height: 10em;
+    border: 15px solid #cfcfcf;
+    border-top-color: #DF2B2B;
+    border-radius: 5em;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {transform: rotate(0turn)}
+    to {transform: rotate(1turn)}
+}
+
+header {
+    transition: filter 0ms ease-in-out 0ms;
+}
+
+nav {
+    background-color: black;
+    border-bottom: 7px solid rgba(223, 43, 43, 0.877);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav h2 {
+    font-size: 2.5em;
+    color: #cfcfcf;
+    transition: 0.5s;
+    cursor: pointer;
+    border-right: 4px solid rgba(223, 43, 43, 0.877);
+    padding: 0.5em;
+}
+
+nav h2:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.5s;
+}
+
+nav h3 {
+    font-size: 2em;
+    color: #cfcfcf;
+    transition: 0.5s;
+    position: relative;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+nav h3:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.5s;
+}
+
+main {
+    background: linear-gradient(270deg, #e4e4e4, #e1e1e1, #d9d9d9, #cacaca);
+    -webkit-animation: main 30s ease infinite;
+    animation: main 30s ease infinite;
+    background-size: cover;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+@-webkit-keyframes main {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes main {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.menu-filter ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    background: #cccccc;
+    width: 100vw;
+    justify-content: center;
+}
+
+.menu-filter ul li {
+    margin-right: 2em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    font-size: 2.5em;
+    font-weight: 550;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+.menu-filter ul li:hover {
+    color: rgba(223, 43, 43, 1);
+    transition: 0.5s;
+  }
+
+.menu-filter ul li:last-child {
+    margin-right: 0;
+}
+
+.menu-filter ul li::after {
+    content: "";
+    height: 5px;
+    width: 0;
+    background: rgba(223, 43, 43, 1);
+    transition: 0.25s ease-in-out;
+    display: block;
+}
+.menu-filter ul li:hover::after {
+    content: "";
+    height: 5px;
+    width: 100%;
+    background: rgba(223, 43, 43, 1);
+    transition: 0.25s ease-in-out;
+    display: block;
+}
+
+.all_result, .whey_title, .creatine_title, .preWorkout_title {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 32%;
+    right: 45%;
+    font-size: 2em;
+    opacity: 0;
+    transition: 0.15s;
+}
+
+.all_result h2,  .whey_title h2, .creatine_title h2, .preWorkout_title h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 2em;
+    transition: 0.15s;
+}
+
+.all_result.active, .whey_title.active, .creatine_title.active, .preWorkout_title.active {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 32%;
+    right: 45%;
+    font-size: 2em;
+    opacity: 1;
+    transition: 0.15s;
+}
+
+::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3d3d3d;
+}
+
+::-webkit-scrollbar-track {
+    background: #777777;
+}
+
+footer {
+    background-color: black;
+    border-top: 7px solid rgba(223, 43, 43, 0.877);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+    font-family: 'Montserrat', sans-serif;
+    transition: filter 0ms ease-in-out 0ms;
+}
+
+.contact {
+    display: inline-flex;
+}
+
+.contact i {
+    font-size: 4em;
+    color: #a1a1a1;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin: 0 0.3em;
+    transition: 0.8s;
+}
+
+.contact i:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.8s;
+    letter-spacing: 0.2em;
+}
+
+.contact p {
+    color: #cfcfcf;
+    font-size: 1.5em;
+    /* display: inline-flex; */
+    position: relative;
+    left: center;
+    font-weight: 550;
+    margin-top: 0.7em;
+    margin-left: 2em;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+    transition: 0.8s;
+}
+
+.contact a:hover {
+    color: rgba(223, 43, 43, 0.877);
+    transition: 0.8s;
+}
