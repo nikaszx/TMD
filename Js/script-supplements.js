@@ -7,50 +7,65 @@ window.addEventListener("load", ()=> {
 })
 
 const optionElements = document.querySelectorAll(".option");
-const AllTitle = document.querySelector(".all_result");
 const WheyBox = document.querySelector(".whey_box");
 const CreatineBox = document.querySelector(".creatine_box");
 const PreWorkoutBox = document.querySelector(".preWorkout_box");
 const WheyTitle = document.querySelector(".whey_title");
 const CreatineTitle = document.querySelector(".creatine_title");
 const PreWorkoutTitle = document.querySelector(".preWorkout_title");
+const WheyDef = document.querySelector(".whey_definition");
+const CreatineDef = document.querySelector(".creatine_definition");
+const preWorkoutDef = document.querySelector(".preWorkout_definition");
 
 function presetAll() {
-  addActive(AllTitle);
-  addActive(WheyBox);
-  addActive(CreatineBox);
-  addActive(PreWorkoutBox);
+  removeActive(WheyBox);
+  removeActive(CreatineBox);
+  removeActive(PreWorkoutBox);
   removeActive(WheyTitle);
   removeActive(CreatineTitle);
   removeActive(PreWorkoutTitle);
+  removeActive(WheyDef);
+  removeActive(CreatineDef);
+  removeActive(preWorkoutDef)
 }
 
 function showWhey() {
   addActive(WheyBox);
   addActive(WheyTitle);
+  addActive(WheyDef)
   removeActive(CreatineBox);
   removeActive(CreatineTitle);
+  removeActive(CreatineDef);
   removeActive(PreWorkoutBox);
   removeActive(PreWorkoutTitle);
+  removeActive(preWorkoutDef)
 }
 
 function showCreatine() {
   addActive(CreatineBox);
   addActive(CreatineTitle);
+  addActive(CreatineDef)
   removeActive(WheyBox);
   removeActive(WheyTitle);
+  removeActive(WheyDef)
   removeActive(PreWorkoutBox);
   removeActive(PreWorkoutTitle);
+  removeActive(preWorkoutDef)
 }
 
 function showPreWorkout() {
   addActive(PreWorkoutBox);
   addActive(PreWorkoutTitle);
+  addActive(preWorkoutDef)
   removeActive(WheyBox);
   removeActive(WheyTitle);
+  removeActive(WheyDef)
   removeActive(CreatineBox);
   removeActive(CreatineTitle);
+  removeActive(CreatineDef)
 }
+
+presetAll();
 
 function addActive(element) {
   if (element) {
@@ -64,28 +79,28 @@ function removeActive(element) {
   }
 }
 
-presetAll();
-
-optionElements.forEach(function(element) {
-  element.addEventListener("click", function() {
+optionElements.forEach(function (element) {
+  element.addEventListener("click", function () {
     const selectedValue = parseInt(this.getAttribute("value"));
 
-    removeActive(AllTitle);
     removeActive(WheyBox);
     removeActive(CreatineBox);
     removeActive(PreWorkoutBox);
+    removeActive(WheyTitle);
+    removeActive(CreatineTitle);
+    removeActive(PreWorkoutTitle);
+    removeActive(WheyDef);
+    removeActive(CreatineDef);
+    removeActive(preWorkoutDef);
 
     switch (selectedValue) {
       case 1:
-        presetAll();
-        break;
-      case 2:
         showWhey();
         break;
-      case 3:
+      case 2:
         showCreatine();
         break;
-      case 4:
+      case 3:
         showPreWorkout();
         break;
       default:

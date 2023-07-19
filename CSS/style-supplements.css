@@ -26,8 +26,8 @@
 
 .preloader::after {
     content: "";
-    width: 10em;
-    height: 10em;
+    width: 7em;
+    height: 7em;
     border: 15px solid #cfcfcf;
     border-top-color: #DF2B2B;
     border-radius: 5em;
@@ -39,33 +39,88 @@
     to {transform: rotate(1turn)}
 }
 
+body {
+    overflow-x: hidden;
+}
+
 header {
     transition: filter 0ms ease-in-out 0ms;
 }
 
-nav {
-    background-color: black;
-    border-bottom: 7px solid rgba(223, 43, 43, 0.877);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 1em;
-    font-family: 'Montserrat', sans-serif;
+@media (max-width: 1439px) {
+    nav {
+        background-color: black;
+        border-bottom: 3.5px solid rgba(223, 43, 43, 0.877);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1em;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+    nav {
+        background-color: black;
+        border-bottom: 7px solid rgba(223, 43, 43, 0.877);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1em;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+@media (min-width: 2560px) {
+    nav {
+        background-color: black;
+        border-bottom: 14px solid rgba(223, 43, 43, 0.877);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1em;
+        font-family: 'Montserrat', sans-serif;
+    }
 }
 
 nav a {
     text-decoration: none;
 }
 
-nav h2 {
-    font-size: 2.5em;
-    color: #cfcfcf;
-    transition: 0.5s;
-    cursor: pointer;
-    border-right: 4px solid rgba(223, 43, 43, 0.877);
-    padding-right: 1.5em;
-    padding: 0.5em;
+@media (max-width: 1439px) {
+    nav h2 {
+        font-size: 1.5em;
+        color: #cfcfcf;
+        transition: 0.5s;
+        cursor: pointer;
+        border-right: 4px solid rgba(223, 43, 43, 0.877);
+        padding: 0.5em 1.5em;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+    nav h2 {
+        font-size: 2.5em;
+        border-right: 4px solid rgba(223, 43, 43, 0.877);
+        color: #cfcfcf;
+        transition: 0.5s;
+        cursor: pointer;
+        padding: 0.5em 1.5em;
+    }    
+}
+
+@media (min-width: 2560px) {
+    nav h2{
+        font-size: 4em;
+        border-right: 10px solid rgba(223, 43, 43, 0.877);
+        color: #cfcfcf;
+        transition: 0.5s;
+        cursor: pointer;
+        padding: 0.5em 1.5em;
+    }
 }
 
 nav h2:hover {
@@ -73,13 +128,37 @@ nav h2:hover {
     transition: 0.5s;
 }
 
-nav h3 {
-    font-size: 2em;
-    color: #cfcfcf;
-    transition: 0.5s;
-    position: relative;
-    margin-left: 3em;
-    cursor: pointer;
+@media (max-width: 1439px) {
+    nav h3 {
+        font-size: 1.5em;
+        color: #cfcfcf;
+        transition: 0.5s;
+        position: relative;
+        margin-left: 3em;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+    nav h3 {
+        font-size: 2em;
+        color: #cfcfcf;
+        transition: 0.5s;
+        position: relative;
+        margin-left: 3em;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 2560px) {
+    nav h3{
+        font-size: 3.5em;
+        color: #cfcfcf;
+        transition: 0.5s;
+        position: relative;
+        margin-left: 3em;
+        cursor: pointer;
+    }
 }
 
 nav h3:hover {
@@ -97,6 +176,7 @@ main {
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
     overflow: hidden;
+    overflow-y: hidden;
 }
 
 @-webkit-keyframes main {
@@ -119,15 +199,36 @@ main {
     justify-content: center;
 }
 
-.menu-filter ul li {
-    margin-right: 2em;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-    font-size: 2.5em;
-    font-weight: 550;
-    cursor: pointer;
-    transition: 0.5s;
-  }
+@media (max-width: 1439px) {
+    .menu-filter ul li {
+        margin-right: 1em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        font-size: 1.5em;
+        font-weight: 550;
+        transition: 0.5s;
+    }
+}
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .menu-filter ul li {
+        margin-right: 1em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        font-size: 2.5em;
+        font-weight: 550;
+        transition: 0.5s;
+    }
+}
+@media (min-width: 2560px) {
+    .menu-filter ul li {
+        margin-right: 2em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        font-size: 3em;
+        font-weight: 550;
+        transition: 0.5s;
+    }
+}
 
 .menu-filter ul li:hover {
     color: rgba(223, 43, 43, 1);
@@ -143,7 +244,7 @@ main {
     height: 5px;
     width: 0;
     background: rgba(223, 43, 43, 1);
-    transition: 0.25s ease-in-out;
+    transition: 0.5s ease-in-out;
     display: block;
 }
 .menu-filter ul li:hover::after {
@@ -151,41 +252,354 @@ main {
     height: 5px;
     width: 100%;
     background: rgba(223, 43, 43, 1);
-    transition: 0.25s ease-in-out;
+    transition: 0.5s ease-in-out;
     display: block;
 }
 
-.all_result, .whey_title, .creatine_title, .preWorkout_title {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 32%;
-    right: 45%;
-    font-size: 2em;
-    opacity: 0;
-    transition: 0.15s;
-}
-
-.all_result h2,  .whey_title h2, .creatine_title h2, .preWorkout_title h2 {
+.whey_title, .creatine_title, .preWorkout_title {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
-    font-size: 2em;
-    transition: 0.15s;
+    position: absolute;
+    top: 15%;
+    font-size: 1em;
+    opacity: 0;
+    transition: 0.5s;
 }
 
-.all_result.active, .whey_title.active, .creatine_title.active, .preWorkout_title.active {
-    display: block;
+@media (max-width: 1439px) {
+    .whey_title h2, .creatine_title h2, .preWorkout_title h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 1.5em;
+        transition: 0.5s;
+    }
+}
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .whey_title h2, .creatine_title h2, .preWorkout_title h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 2em;
+        transition: 0.5s;
+    }
+}
+@media (min-width: 2560px) {
+    .whey_title h2, .creatine_title h2, .preWorkout_title h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 2.5em;
+        transition: 0.5s;
+    }
+}
+
+@media (max-width: 1439px) {
+    .whey_title.active, .creatine_title.active, .preWorkout_title.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10%;
+        font-size: 1.5em;
+        opacity: 1;
+        transition: 0.5s;
+    }
+}
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .whey_title.active, .creatine_title.active, .preWorkout_title.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10%;
+        font-size: 2em;
+        opacity: 1;
+        transition: 0.5s;
+    }
+}
+@media (min-width: 2560px) {
+    .whey_title.active, .creatine_title.active, .preWorkout_title.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10%;
+        font-size: 4em;
+        opacity: 1;
+        transition: 0.5s;
+    }
+}
+
+.whey_box, .creatine_box, .preWorkout_box {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.whey_box.active, .creatine_box.active, .preWorkout_box.active {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+.whey_card, .creatine_card, .preWorkout_card {
+    padding-right: 10%;
+    width: 40%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e21818;
+    transition: 0.5s;
+}
+
+@media (max-width: 1439px) {
+    .whey_card h2, .creatine_card h2, .preWorkout_card h2 {
+        color: white;
+        font-size: 1em;
+        position: relative;
+        left: 20%;
+    }
+}
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .whey_card h2, .creatine_card h2, .preWorkout_card h2 {
+        color: white;
+        font-size: 1.4em;
+        position: relative;
+        left: 20%;
+    }
+}
+@media (min-width: 2560px) {
+    .whey_card h2, .creatine_card h2, .preWorkout_card h2 {
+        color: white;
+        font-size: 2.5em;
+        position: relative;
+        left: 20%;
+    }
+}
+
+@media (max-width: 1439px) {
+    .whey_card h3, .creatine_card h3, .preWorkout_card h3 {
+        color: white;
+        background: black;
+        padding: 0.5em;
+        margin-top: 0.5em;
+        font-size: 1em;
+        border-radius: 0.1em;
+        cursor: pointer;
+        position: relative;
+        left: 20%;
+    }
+}
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .whey_card h3, .creatine_card h3, .preWorkout_card h3 {
+        color: white;
+        background: black;
+        padding: 0.5em;
+        margin-top: 0.5em;
+        font-size: 1.5em;
+        border-radius: 0.1em;
+        cursor: pointer;
+        position: relative;
+        left: 20%;
+    }
+}
+@media (min-width: 2560px) {
+    .whey_card h3, .creatine_card h3, .preWorkout_card h3 {
+        color: white;
+        background: black;
+        padding: 0.5em;
+        margin-top: 0.5em;
+        font-size: 2.5em;
+        border-radius: 0.1em;
+        cursor: pointer;
+        position: relative;
+        left: 20%;
+    }
+}
+
+@media (max-width: 1439px) {
+    .whey_card img, .creatine_card img, .preWorkout_card img {
+        width: 90%;
+        height: 75%;
+        border: none;
+        padding: 1em;
+        cursor: pointer;
+        transition: 0.5s;
+        position: relative;
+        left: 20%;
+    }
+    
+    .whey_card img:hover, .creatine_card img:hover, .preWorkout_card img:hover {
+        width: 95%;
+        height: 80%;
+        border: none;
+        transition: 0.5s;
+    }
+}
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .whey_card img, .creatine_card img, .preWorkout_card img {
+        width: 90%;
+        height: 75%;
+        border: none;
+        padding: 1em;
+        cursor: pointer;
+        transition: 0.5s;
+        position: relative;
+        left: 20%;
+    }
+    
+    .whey_card img:hover, .creatine_card img:hover, .preWorkout_card img:hover {
+        width: 95%;
+        height: 80%;
+        border: none;
+        transition: 0.5s;
+    }
+}
+@media (min-width: 2560px) {
+    .whey_card img, .creatine_card img, .preWorkout_card img {
+        width: 90%;
+        height: 75%;
+        border: none;
+        padding: 1em;
+        cursor: pointer;
+        transition: 0.5s;
+        position: relative;
+        left: 20%;
+    }
+    
+    .whey_card img:hover, .creatine_card img:hover, .preWorkout_card img:hover {
+        width: 95%;
+        height: 80%;
+        border: none;
+        transition: 0.5s;
+    }
+}
+
+.definition_cards {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 32%;
-    right: 45%;
-    font-size: 2em;
+    top: 75%;
+    left: 20%;
+    width: 60%;
+    height: 45%;
+}
+
+@media (max-width: 1439px) {
+    .whey_definition, .creatine_definition, .preWorkout_definition {
+        background: black;
+        color: #cfcfcf;
+        padding: 1em;
+        justify-content: center;
+        border-radius: 0.2em;
+        font-size: 1em;
+        border: 0.2em solid #cfcfcf;
+        box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+        -webkit-box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+        -moz-box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+        transition: 0.5s;
+        visibility: hidden;
+        position: absolute;
+        top: 80%;
+        opacity: 0;
+        width: 120%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .whey_definition, .creatine_definition, .preWorkout_definition {
+        background: black;
+        color: #cfcfcf;
+        padding: 1em;
+        justify-content: center;
+        border-radius: 0.2em;
+        font-size: 1.5em;
+        border: 0.2em solid #cfcfcf;
+        box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+        -webkit-box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+        -moz-box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+        transition: 0.5s;
+        visibility: hidden;
+        position: absolute;
+        top: 80%;
+        opacity: 0;
+        width: 120%;
+        height: 100%;
+    }
+}
+@media (min-width: 2560px) {
+    .whey_definition, .creatine_definition, .preWorkout_definition {
+        background: black;
+        color: #cfcfcf;
+        padding: 1em;
+        justify-content: center;
+        border-radius: 0.2em;
+        font-size: 2.5em;
+        border: 0.2em solid #cfcfcf;
+        box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+        -webkit-box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+        -moz-box-shadow: 15px 15px 0px 0px rgba(223, 43, 43, 0.9);
+        transition: 0.5s;
+        visibility: hidden;
+        position: absolute;
+        top: 80%;
+        opacity: 0;
+        width: 120%;
+        height: 100%;
+    }
+}
+
+.whey_definition.active, .creatine_definition.active, .preWorkout_definition.active {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 80%;
+    visibility: visible;
     opacity: 1;
-    transition: 0.15s;
+    transition: 0.5s;
+}
+
+.whey_definition:hover, .creatine_definition:hover, .preWorkout_definition:hover {
+    border: 0.2em solid #DF2B2B;
+    transition: 0.5s;
+}
+
+.whey_definition h2, .creatine_definition h2, .preWorkout_definition h2 {
+    margin-bottom: 0.5em;
+    transition: 0.5s;
+}
+
+.whey_definition h2:hover, .creatine_definition h2:hover, .preWorkout_definition h2:hover {
+    color: #e21818;
+    transition: 0.5s;
 }
 
 ::-webkit-scrollbar {
@@ -200,29 +614,83 @@ main {
     background: #777777;
 }
 
-footer {
-    background-color: black;
-    border-top: 7px solid rgba(223, 43, 43, 0.877);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 1em;
-    font-family: 'Montserrat', sans-serif;
-    transition: filter 0ms ease-in-out 0ms;
+@media (max-width: 1439px) {
+    footer {
+        background-color: black;
+        border-top: 4px solid rgba(223, 43, 43, 0.877);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1em;
+        font-family: 'Montserrat', sans-serif;
+        transition: filter 0ms ease-in-out 0ms;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+    footer {
+        background-color: black;
+        border-top: 7px solid rgba(223, 43, 43, 0.877);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1em;
+        font-family: 'Montserrat', sans-serif;
+        transition: filter 0ms ease-in-out 0ms;
+    }
+}
+
+@media (min-width: 2560px) {
+    footer {
+        background-color: black;
+        border-top: 15px solid rgba(223, 43, 43, 0.877);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1em;
+        font-family: 'Montserrat', sans-serif;
+        transition: filter 0ms ease-in-out 0ms;
+    }
 }
 
 .contact {
     display: inline-flex;
 }
 
-.contact i {
-    font-size: 4em;
-    color: #a1a1a1;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    margin: 0 0.3em;
-    transition: 0.8s;
+@media (max-width: 1439px) {
+    .contact i {
+        font-size: 2.5em;
+        color: #a1a1a1;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        margin: 0 0.3em;
+        transition: 0.8s;
+    }
+}
+
+@media (min-width: 2560px) {
+    .contact i {
+        font-size: 3.5em;
+        color: #a1a1a1;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        margin: 0 0.3em;
+        transition: 0.8s;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .contact i {
+        font-size: 3em;
+        color: #a1a1a1;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        margin: 0 0.3em;
+        transition: 0.8s;
+    }
 }
 
 .contact i:hover {
@@ -231,23 +699,87 @@ footer {
     letter-spacing: 0.2em;
 }
 
-.contact p {
-    color: #cfcfcf;
-    font-size: 1.5em;
-    /* display: inline-flex; */
-    position: relative;
-    left: center;
-    font-weight: 550;
-    margin-top: 0.7em;
-    margin-left: 2em;
+@media (max-width: 1439px) {
+    .contact p {
+        color: #cfcfcf;
+        font-size: 1em;
+        position: relative;
+        left: center;
+        font-weight: 450;
+        margin-top: 0.7em;
+        margin-left: 2em;
+    }
 }
 
-.contact a {
-    text-decoration: none;
-    color: white;
-    transition: 0.8s;
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .contact p {
+        color: #cfcfcf;
+        font-size: 1.5em;
+        position: relative;
+        left: center;
+        font-weight: 450;
+        margin-top: 0.7em;
+        margin-left: 2em;
+    }
 }
 
+@media (min-width: 2560px) {
+    .contact p {
+        color: #cfcfcf;
+        font-size: 3em;
+        position: relative;
+        left: center;
+        font-weight: 450;
+        margin-top: 0.7em;
+        margin-left: 2em;
+    }
+}
+
+@media (min-width: 2560px) {
+    .contact .shortcut {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 1439px) {
+    .contact .shortcut {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .contact .shortcut {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 1439px) {
+    .contact a {
+      text-decoration: none;
+      color: white;
+      font-size: 1em;
+      transition: 0.8s;
+    }
+  }
+  
+  @media (min-width: 1440px) and (max-width: 2559px) {
+    .contact a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5em;
+      transition: 0.8s;
+    }
+  }
+  
+  @media (min-width: 2560px) {
+    .contact a {
+      text-decoration: none;
+      color: white;
+      font-size: 2em;
+      transition: 0.8s;
+    }
+  }
+  
 .contact a:hover {
     color: rgba(223, 43, 43, 0.877);
     transition: 0.8s;
