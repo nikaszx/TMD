@@ -26,46 +26,47 @@ function presetAll() {
   removeActive(PreWorkoutTitle);
   removeActive(WheyDef);
   removeActive(CreatineDef);
-  removeActive(preWorkoutDef)
+  removeActive(preWorkoutDef);
 }
 
 function showWhey() {
   addActive(WheyBox);
   addActive(WheyTitle);
-  addActive(WheyDef)
+  addActive(WheyDef);
   removeActive(CreatineBox);
   removeActive(CreatineTitle);
   removeActive(CreatineDef);
   removeActive(PreWorkoutBox);
   removeActive(PreWorkoutTitle);
-  removeActive(preWorkoutDef)
+  removeActive(preWorkoutDef);
 }
 
 function showCreatine() {
   addActive(CreatineBox);
   addActive(CreatineTitle);
-  addActive(CreatineDef)
+  addActive(CreatineDef);
   removeActive(WheyBox);
   removeActive(WheyTitle);
-  removeActive(WheyDef)
+  removeActive(WheyDef);
   removeActive(PreWorkoutBox);
   removeActive(PreWorkoutTitle);
-  removeActive(preWorkoutDef)
+  removeActive(preWorkoutDef);
 }
 
 function showPreWorkout() {
   addActive(PreWorkoutBox);
   addActive(PreWorkoutTitle);
-  addActive(preWorkoutDef)
+  addActive(preWorkoutDef);
   removeActive(WheyBox);
   removeActive(WheyTitle);
-  removeActive(WheyDef)
+  removeActive(WheyDef);
   removeActive(CreatineBox);
   removeActive(CreatineTitle);
-  removeActive(CreatineDef)
+  removeActive(CreatineDef);
 }
 
-presetAll();
+// Definindo a função showWhey como predefinição
+showWhey();
 
 function addActive(element) {
   if (element) {
