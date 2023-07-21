@@ -1,4 +1,4 @@
-<!-- <?php CORRIGIR, ADICIONAR E TESTAR NOVAS VERIFICAÇÕES
+<?php
     include_once('Connection/connection.php');
     include_once('Classes/user.php');
 
@@ -38,7 +38,7 @@
         $schedule->schedule($FULL_NAME, $EMAIL, $AGE, $SCHEDULING_DATE);
         echo "Agendamento realizado com sucesso!"; //personalizar alert com javascript
     }
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">
